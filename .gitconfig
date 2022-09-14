@@ -1,6 +1,8 @@
 [user]
-	email = resqnet52@gmail.com
-	name = resqnet
+	email = hogehoge@gmail.com
+	name = hogehoge
 [alias]
 	st = status
 	cpush= !git push origin `git rev-parse --abbrev-ref HEAD`
+[core]
+	autoCRLF = true
