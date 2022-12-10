@@ -64,7 +64,7 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c(%u%b)%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-PROMPT='%B%F{green}%n@%m%f%b:[%B%F{blue}%~%f%b]${vcs_info_msg_0_} %(?.%B%F{green}.%B%F{blue})%(?!(๑˃̵ᴗ˂̵)ﻭ < !(;^ω^%) < )%f%b'
+PROMPT='%B%F{green}%n:[%B%F{blue}%~%f%b]${vcs_info_msg_0_} %(?.%B%F{green}.%B%F{blue})%(?!(๑˃̵ᴗ˂̵)ﻭ < !(;^ω^%) < )%f%b'
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -80,15 +80,6 @@ export sakura_url2=xxxxxx
 alias sakuravps='ssh -p 2033 -A ${server_user}@${sakura_url1}'
 alias sakuravps2='ssh -p 2033 -A ${server_user}@${sakura_url2}'
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/{user}/.ndenv/versions/v10.16.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/{user}/.ndenv/versions/v10.16.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/{user}/.ndenv/versions/v10.16.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/{user}/.ndenv/versions/v10.16.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/{user}/.ndenv/versions/v10.16.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/{user}/.ndenv/versions/v10.16.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsheval "$(plenv init -)"
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -116,18 +107,6 @@ function SearchDesynth() {
 	fi
 }
 
-export GOPATH=$HOME/.go
-export GOROOT="/usr/local/go"
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
-export EDITOR=$(which vim)
-
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
 
-export DENO_INSTALL="/home/resqnet/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
