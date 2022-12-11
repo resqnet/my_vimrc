@@ -17,4 +17,5 @@ curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/
 sudo apt-get install language-pack-ja
 echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(nodenv init -)"' >> ~/.zshrc
+https://nodejs.org/ja/
 ```
