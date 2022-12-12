@@ -5,4 +5,4 @@
 	st = status
 	cpush= !git push origin `git rev-parse --abbrev-ref HEAD`
 [core]
-	autoCRLF = true
+	autocrlf = false
