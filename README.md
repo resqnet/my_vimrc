@@ -1,6 +1,6 @@
 ```ubuntu
 # wsl2
-ubuntu apt update
+sudo apt update
 sudo apt upgrade
 ```
 ```zsh install
