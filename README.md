@@ -1,3 +1,8 @@
+```ubuntu
+# wsl2
+ubuntu apt update
+sudo apt upgrade
+```
 ```zsh install
 sudo apt install zsh
 chsh -s $(which zsh)
