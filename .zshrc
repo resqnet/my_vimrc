@@ -54,7 +54,7 @@ GIT_PS1_SHOWUPSTREAM=1
 # GIT_PS1_SHOWSTASHSTATE=1
 
 
-PROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
+# PROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 
 autoload -Uz vcs_info
 setopt prompt_subst
@@ -64,12 +64,12 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c(%u%b)%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-PROMPT='%B%F{green}%n:[%B%F{blue}%~%f%b]${vcs_info_msg_0_} %(?.%B%F{green}.%B%F{blue})%(?!(๑˃̵ᴗ˂̵)ﻭ < !(;^ω^%) < )%f%b'
+# PROMPT='%B%F{green}%n:[%B%F{blue}%~%f%b]${vcs_info_msg_0_} %(?.%B%F{green}.%B%F{blue})%(?!(๑˃̵ᴗ˂̵)ﻭ < !(;^ω^%) < )%f%b'
+PROMPT='%n:%m:[%~]${vcs_info_msg_0_}%(?!(๑>ᴗ<)ﻭ < !(;^ω^%) < )'
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 alias gitgraph="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias tmux='LD_LIBRARY_PATH=${HOME}/tmux-2.1/libevent-2.0.22-stable/build/lib ${HOME}/tmux-2.1/build/bin/tmux'
 
 function history-all { history -E 1 }
 
@@ -110,3 +110,5 @@ function SearchDesynth() {
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
